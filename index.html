@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Natación Hondureña | Talento y Pasión</title>
+
+    <meta name="description"
+          content="Descubre la natación hondureña, sus atletas destacados, disciplinas acuáticas, historia y competencias nacionales e internacionales.">
+
+    <meta name="theme-color" content="#063b63">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        :root {
+            --azul: #063b63;
+            --azul-oscuro: #042740;
+            --celeste: #00a6d6;
+            --turquesa: #12c6c0;
+            --blanco: #ffffff;
+            --gris: #f3f8fb;
+            --texto: #526779;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--texto);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        a {
+            transition: all .3s ease;
+        }
+
+        .site-navbar {
+            background: rgba(4, 39, 64, .97);
+            padding: 12px 0 !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .12);
+        }
+
+        .site-logo img {
+            max-width: 175px;
+            max-height: 65px;
+            object-fit: contain;
+        }
+
+        .site-menu > li > a {
+            color: white !important;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            padding: 12px 13px !important;
+        }
+
+        .site-menu > li > a:hover,
+        .site-menu > li.active > a {
+            color: var(--turquesa) !important;
+        }
+
+        .hero-natacion {
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background:
+                linear-gradient(90deg,
+                rgba(3, 28, 49, .92) 0%,
+                rgba(3, 47, 76, .70) 55%,
+                rgba(3, 47, 76, .25) 100%),
+                url('images/bg_3.jpg') center/cover no-repeat;
+            padding: 150px 0 100px;
+        }
+
+        .hero-content {
+            max-width: 780px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 8px 17px;
+            border: 1px solid rgba(255,255,255,.4);
+            border-radius: 30px;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-natacion h1 {
+            font-size: clamp(40px, 6vw, 72px);
+            line-height: 1.13;
+            color: white;
+            margin-bottom: 25px;
+        }
+
+        .hero-natacion h1 span {
+            color: var(--turquesa);
+        }
+
+        .hero-natacion p {
+            color: #e2eff7;
+            font-size: 16px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .btn-natacion {
+            display: inline-block;
+            background: var(--celeste);
+            color: white !important;
+            border-radius: 6px;
+            padding: 14px 25px;
+            font-size: 13px;
+            font-weight: 700;
+            border: 2px solid var(--celeste);
+        }
+
+        .btn-natacion:hover {
+            background: var(--turquesa);
+            border-color: var(--turquesa);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-natacion {
+            display: inline-block;
+            padding: 14px 25px;
+            border: 2px solid rgba(255,255,255,.7);
+            border-radius: 6px;
+            color: white !important;
+            font-size: 13px;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .btn-outline-natacion:hover {
+            background: white;
+            color: var(--azul) !important;
+        }
+
+        .intro-section {
+            padding: 75px 0;
+            background: white;
+        }
+
+        .intro-box {
+            background: var(--azul);
+            color: white;
+            border-radius: 18px;
+            padding: 35px;
+            height: 100%;
+            box-shadow: 0 15px 40px rgba(6, 59, 99, .15);
+        }
+
+        .intro-box h3 {
+            color: white;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .intro-box p {
+            color: #dcecf6;
+            margin-bottom: 0;
+        }
+
+        .intro-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background: rgba(18, 198, 192, .17);
+            color: var(--turquesa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 22px;
+        }
+
+        .section-padding {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-heading .eyebrow {
+            display: inline-block;
+            color: var(--celeste);
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 {
+            color: var(--azul);
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .bg-light-blue {
+            background: var(--gris);
+        }
+
+        .athlete-card {
+            height: 100%;
+            overflow: hidden;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 28px rgba(6, 59, 99, .09);
+            transition: transform .3s, box-shadow .3s;
+        }
+
+        .athlete-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(6, 59, 99, .16);
+        }
+
+        .athlete-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            background: #dceaf2;
+        }
+
+        .athlete-info {
+            padding: 24px;
+        }
+
+        .athlete-info h3 {
+            color: var(--azul);
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .athlete-info p {
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+
+        .athlete-label {
+            display: inline-block;
+            background: #e3f8fa;
+            color: #007f9b;
+            border-radius: 30px;
+            padding: 5px 12px;
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .discipline-card {
+            height: 100%;
+            padding: 35px 25px;
+            background: white;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e5eef4;
+            transition: .3s;
+        }
+
+        .discipline-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--celeste);
+            box-shadow: 0 15px 35px rgba(6, 59, 99, .10);
+        }
+
+        .discipline-icon {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: #e4f7fb;
+            color: var(--azul);
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 23px;
+        }
+
+        .discipline-card h3 {
+            color: var(--azul);
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .discipline-card p {
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+
+        .history-panel {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            height: 100%;
+            box-shadow: 0 8px 28px rgba(6, 59, 99, .07);
+        }
+
+        .history-panel h3 {
+            color: var(--azul);
+            font-size: 22px;
+            margin: 15px 0;
+        }
+
+        .history-panel p {
+            font-size: 14px;
+        }
+
+        .history-panel img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 8px 28px rgba(6, 59, 99, .09);
+            transition: .3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 225px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 25px;
+        }
+
+        .news-content h3 {
+            color: var(--azul);
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .news-content p {
+            font-size: 13px;
+        }
+
+        .news-category {
+            font-size: 10px;
+            font-weight: 800;
+            color: #0089b7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .facts-section {
+            background:
+                linear-gradient(rgba(4,39,64,.95), rgba(4,39,64,.95)),
+                url('images/bg_3.jpg') center/cover;
+            color: white;
+        }
+
+        .facts-section .section-heading h2 {
+            color: white;
+        }
+
+        .facts-section .section-heading p {
+            color: #d5e7f1;
+        }
+
+        .fact-card {
+            padding: 28px 18px;
+            height: 100%;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,.16);
+            border-radius: 12px;
+            background: rgba(255,255,255,.05);
+        }
+
+        .fact-card h3 {
+            font-size: 20px;
+            color: var(--turquesa);
+            margin-bottom: 12px;
+        }
+
+        .fact-card p {
+            color: #d5e7f1;
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+
+        .cta-section {
+            padding: 65px 0;
+            background: linear-gradient(120deg, var(--celeste), var(--azul));
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: #edfaff;
+            max-width: 720px;
+            margin: 0 auto 25px;
+        }
+
+        .cta-section .btn-natacion {
+            background: white;
+            border-color: white;
+            color: var(--azul) !important;
+        }
+
+        .footer-section {
+            background: #031e31;
+            padding-top: 65px;
+            color: #c5d7e3;
+        }
+
+        .footer-section h3 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section a {
+            color: #c5d7e3;
+            font-size: 13px;
+        }
+
+        .footer-section a:hover {
+            color: var(--turquesa);
+        }
+
+        .footer-section li {
+            margin-bottom: 9px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.12);
+            margin-top: 35px;
+            padding: 22px 0;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .footer-logo {
+            max-width: 155px;
+            max-height: 65px;
+            object-fit: contain;
+            margin-bottom: 18px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.1);
+            margin-right: 7px;
+        }
+
+        .social-link:hover {
+            background: var(--celeste);
+            color: white;
+        }
+
+        section[id], div[id="atletas"],
+        div[id="disciplinas"], div[id="noticias"],
+        div[id="historia"] {
+            scroll-margin-top: 85px;
+        }
+
+        /* BOTÓN VOLVER AL INICIO */
+        .btn-volver-inicio {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--celeste);
+            color: white !important;
+            font-size: 26px;
+            font-weight: bold;
+            border-radius: 50%;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            z-index: 3000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-volver-inicio.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .btn-volver-inicio:hover {
+            background: var(--azul);
+            transform: translateY(-4px);
+        }
+
+        @media (max-width: 991px) {
+            .hero-natacion {
+                min-height: 600px;
+                padding: 130px 0 80px;
+                background-position: center;
+            }
+
+            .site-navigation {
+                display: none;
+            }
+
+            .athlete-image {
+                height: 250px;
+            }
+
+            .section-padding {
+                padding: 65px 0;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .hero-natacion {
+                min-height: 570px;
+                padding: 115px 0 65px;
+            }
+
+            .hero-natacion h1 {
+                font-size: 39px;
+            }
+
+            .hero-natacion p {
+                font-size: 14px;
+            }
+
+            .btn-natacion,
+            .btn-outline-natacion {
+                padding: 12px 15px;
+                font-size: 11px;
+            }
+
+            .btn-outline-natacion {
+                margin-left: 4px;
+            }
+
+            .intro-box,
+            .history-panel {
+                padding: 25px;
+            }
+
+            .athlete-image {
+                height: 260px;
+            }
+
+            .section-heading {
+                margin-bottom: 32px;
+            }
+
+            .btn-volver-inicio {
+                width: 47px;
+                height: 47px;
+                right: 17px;
+                bottom: 17px;
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="site-wrap">    <!-- MENÚ MÓVIL -->
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <!-- NAVEGACIÓN (sin pestaña Contacto) -->
+    <header class="site-navbar py-4" role="banner">
+        <div class="container">
+            <div class="d-flex align-items-center">
+
+                <div class="site-logo">
+                    <a href="#inicio">
+                        <img src="images/logo.png"
+                             alt="Logo de Natación Hondureña">
+                    </a>
+                </div>
+
+                <div class="ml-auto">
+                    <nav class="site-navigation position-relative text-right"
+                         role="navigation">
+
+                        <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                            <li class="active"><a href="#inicio" class="nav-link">Inicio</a></li>
+                            <li><a href="#atletas" class="nav-link">Atletas</a></li>
+                            <li><a href="#disciplinas" class="nav-link">Disciplinas</a></li>
+                            <li><a href="#noticias" class="nav-link">Noticias</a></li>
+                            <li><a href="#historia" class="nav-link">Historia</a></li>
+                        </ul>
+
+                    </nav>
+
+                    <a href="#"
+                       class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-white float-right"
+                       aria-label="Abrir menú">
+                        <span class="icon-menu h3 text-white"></span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- PORTADA -->
+    <section class="hero-natacion" id="inicio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="hero-content" data-aos="fade-up">
+
+                        <span class="hero-tag">
+                            Honduras · Deportes acuáticos
+                        </span>
+
+                        <h1>
+                            Natación <span>Hondureña</span>
+                        </h1>
+
+                        <p>
+                            Descubre la pasión, el esfuerzo y la dedicación
+                            de los nadadores que representan a Honduras.
+                            Conoce sus historias, las disciplinas acuáticas
+                            y el crecimiento de este deporte en nuestro país.
+                        </p>
+
+                        <a href="#atletas" class="btn-natacion">
+                            CONOCER ATLETAS
+                        </a>
+
+                        <a href="#historia" class="btn-outline-natacion">
+                            NUESTRA HISTORIA
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESENTACIÓN -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="intro-box">
+                        <div class="intro-icon">🏊</div>
+                        <h3>Pasión por el agua</h3>
+                        <p>
+                            La natación combina técnica, resistencia y
+                            constancia. Cada entrenamiento representa
+                            una oportunidad para aprender y superarse.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="intro-box">
+                        <div class="intro-icon">🇭🇳</div>
+                        <h3>Orgullo hondureño</h3>
+                        <p>
+                            Los deportistas hondureños llevan el nombre
+                            de nuestro país a competencias regionales
+                            e internacionales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="intro-box">
+                        <div class="intro-icon">🏆</div>
+                        <h3>Esfuerzo y disciplina</h3>
+                        <p>
+                            La preparación, el compromiso y el trabajo
+                            constante son fundamentales para avanzar
+                            en el deporte acuático.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ATLETAS -->
+    <section class="section-padding bg-light-blue" id="atletas">
+        <div class="container">
+
+            <div class="section-heading" data-aos="fade-up">
+                <span class="eyebrow">Talento nacional</span>
+                <h2>Atletas Hondureños Destacados</h2>
+                <p>
+                    Conoce a algunos de los nadadores que han representado
+                    a Honduras en importantes competencias deportivas.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <!-- JULIMAR ÁVILA -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="athlete-card">
+                        <img src="images/img_1.jpg"
+                             class="athlete-image"
+                             alt="Imagen de referencia de la natación hondureña"
+                             loading="lazy">
+
+                        <div class="athlete-info">
+                            <span class="athlete-label">Natación</span>
+                            <h3>Julimar Ávila</h3>
+                            <p>
+                                Nadadora hondureña que participó en los
+                                Juegos Olímpicos de Tokio 2020 y París 2024.
+                                En Tokio compitió en los 200 metros mariposa
+                                y avanzó a las semifinales.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ALLAN GUTIÉRREZ -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <article class="athlete-card">
+                        <img src="images/img_2.jpg"
+                             class="athlete-image"
+                             alt="Imagen de referencia de entrenamiento de natación"
+                             loading="lazy">
+
+                        <div class="athlete-info">
+                            <span class="athlete-label">Competición</span>
+                            <h3>Allan Gutiérrez</h3>
+                            <p>
+                                Nadador hondureño que representó al país
+                                en los Juegos Olímpicos de Londres 2012
+                                y Río 2016, además de competir en los
+                                Juegos Olímpicos de la Juventud de 2010.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- JULIO HORREGO -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <article class="athlete-card">
+                        <img src="images/img_3.jpg"
+                             class="athlete-image"
+                             alt="Imagen de referencia de una competencia de natación"
+                             loading="lazy">
+
+                        <div class="athlete-info">
+                            <span class="athlete-label">Estilo pecho</span>
+                            <h3>Julio Horrego</h3>
+                            <p>
+                                Nadador hondureño que ha participado
+                                en competencias internacionales.
+                                En París 2024 compitió en la prueba
+                                de 200 metros pecho.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- DIEGO DULIEU -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <article class="athlete-card">
+                        <img src="images/imagen14.jpg"
+                             class="athlete-image"
+                             alt="Imagen de referencia de deportistas acuáticos"
+                             loading="lazy">
+
+                        <div class="athlete-info">
+                            <span class="athlete-label">Talento nacional</span>
+                            <h3>Diego Dulieu</h3>
+                            <p>
+                                Nadador hondureño vinculado al desarrollo
+                                de la natación competitiva. Su trayectoria
+                                forma parte de las nuevas generaciones
+                                del deporte acuático nacional.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>    <!-- DISCIPLINAS -->
+    <section class="section-padding" id="disciplinas">
+        <div class="container">
+
+            <div class="section-heading" data-aos="fade-up">
+                <span class="eyebrow">Deportes acuáticos</span>
+                <h2>Disciplinas de la Natación</h2>
+                <p>
+                    Los deportes acuáticos incluyen diferentes modalidades
+                    que ponen a prueba la técnica, la resistencia,
+                    la coordinación y el trabajo en equipo.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="discipline-card">
+                        <div class="discipline-icon">🏊</div>
+                        <h3>Natación en piscina</h3>
+                        <p>
+                            Los deportistas compiten en estilos libre,
+                            espalda, pecho y mariposa, en diferentes
+                            distancias y categorías.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="discipline-card">
+                        <div class="discipline-icon">🌊</div>
+                        <h3>Aguas abiertas</h3>
+                        <p>
+                            Se practica en espacios naturales como
+                            lagos, ríos o el mar. Requiere resistencia,
+                            orientación y estrategia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="discipline-card">
+                        <div class="discipline-icon">🤸</div>
+                        <h3>Clavados</h3>
+                        <p>
+                            Los atletas realizan saltos desde trampolines
+                            o plataformas y son evaluados por su ejecución
+                            y precisión.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="discipline-card">
+                        <div class="discipline-icon">🤽</div>
+                        <h3>Polo acuático</h3>
+                        <p>
+                            Deporte colectivo que combina natación,
+                            coordinación, estrategia y colaboración
+                            entre los integrantes del equipo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORIA -->
+    <section class="section-padding bg-light-blue" id="historia">
+        <div class="container">
+
+            <div class="section-heading" data-aos="fade-up">
+                <span class="eyebrow">Desarrollo deportivo</span>
+                <h2>Historia de la Natación Hondureña</h2>
+                <p>
+                    La formación deportiva, los clubes y las organizaciones
+                    nacionales contribuyen al desarrollo de nuevos talentos.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="history-panel">
+                        <img src="images/img_1.jpg"
+                             alt="Natación y desarrollo deportivo en Honduras"
+                             loading="lazy">
+
+                        <span class="athlete-label mt-4">Organización</span>
+
+                        <h3>Federación Hondureña de Natación</h3>
+
+                        <p>
+                            La Federación Hondureña de Natación (FEHNA)
+                            es una organización vinculada al desarrollo
+                            de la natación y las actividades acuáticas
+                            en Honduras.
+                        </p>
+
+                        <p>
+                            La organización de competencias, la preparación
+                            de deportistas y la participación internacional
+                            forman parte del trabajo necesario para impulsar
+                            el crecimiento de este deporte.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="history-panel">
+                        <img src="images/img_3.jpg"
+                             alt="Entrenamiento de natación"
+                             loading="lazy">
+
+                        <span class="athlete-label mt-4">Formación</span>
+
+                        <h3>Clubes y nuevas generaciones</h3>
+
+                        <p>
+                            Los clubes de natación ofrecen espacios
+                            para aprender las técnicas de este deporte,
+                            mejorar las habilidades acuáticas y preparar
+                            a los atletas para las competencias.
+                        </p>
+
+                        <p>
+                            La participación de niños y jóvenes ayuda
+                            a construir una base deportiva que puede
+                            favorecer el surgimiento de nuevos talentos
+                            para representar al país.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NOTICIAS -->
+    <section class="section-padding" id="noticias">
+        <div class="container">
+
+            <div class="section-heading" data-aos="fade-up">
+                <span class="eyebrow">Actualidad deportiva</span>
+                <h2>Noticias e Información</h2>
+                <p>
+                    Conoce temas importantes sobre los atletas,
+                    la preparación deportiva y las competencias
+                    de natación.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="news-card">
+                        <img src="images/img_1.jpg"
+                             alt="Natación hondureña"
+                             loading="lazy">
+
+                        <div class="news-content">
+                            <span class="news-category">Atletas</span>
+                            <h3>Honduras en los Juegos Olímpicos</h3>
+                            <p>
+                                La participación olímpica permite
+                                a los nadadores hondureños competir
+                                en uno de los escenarios deportivos
+                                más importantes del mundo.
+                            </p>
+                            <a href="#atletas">Conocer a los atletas →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <article class="news-card">
+                        <img src="images/img_2.jpg"
+                             alt="Preparación y entrenamiento acuático"
+                             loading="lazy">
+
+                        <div class="news-content">
+                            <span class="news-category">Entrenamiento</span>
+                            <h3>La importancia de la preparación</h3>
+                            <p>
+                                La técnica, la resistencia, la constancia
+                                y el acompañamiento de entrenadores son
+                                elementos importantes en la formación
+                                de los nadadores.
+                            </p>
+                            <a href="#disciplinas">Explorar disciplinas →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <article class="news-card">
+                        <img src="images/img_3.jpg"
+                             alt="Piscina y competencias de natación"
+                             loading="lazy">
+
+                        <div class="news-content">
+                            <span class="news-category">Desarrollo</span>
+                            <h3>El futuro de la natación nacional</h3>
+                            <p>
+                                Los clubes y los programas de formación
+                                pueden ayudar a que nuevas generaciones
+                                desarrollen sus capacidades y participen
+                                en el deporte competitivo.
+                            </p>
+                            <a href="#historia">Conocer más →</a>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>    <!-- DATOS IMPORTANTES -->
+    <section class="section-padding facts-section">
+        <div class="container">
+
+            <div class="section-heading" data-aos="fade-up">
+                <span class="eyebrow">Información deportiva</span>
+                <h2>La Natación en Datos</h2>
+                <p>
+                    Aspectos importantes para comprender el deporte
+                    y su desarrollo en Honduras.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="fact-card">
+                        <h3>Estilos</h3>
+                        <p>
+                            Libre, espalda, pecho y mariposa son
+                            los cuatro estilos de la natación
+                            competitiva en piscina.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="fact-card">
+                        <h3>Resistencia</h3>
+                        <p>
+                            La preparación física y la técnica
+                            ayudan a los nadadores a mejorar
+                            su desempeño.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="fact-card">
+                        <h3>Competencias</h3>
+                        <p>
+                            Los atletas pueden participar
+                            en eventos nacionales, regionales
+                            e internacionales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="fact-card">
+                        <h3>Formación</h3>
+                        <p>
+                            Los clubes, entrenadores y programas
+                            deportivos contribuyen al desarrollo
+                            de nuevos nadadores.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LLAMADO A LA ACCIÓN -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¡Apoyemos la natación hondureña!</h2>
+
+            <p>
+                Conocer a nuestros deportistas, promover las disciplinas
+                acuáticas y apoyar la formación de jóvenes talentos
+                contribuye al crecimiento del deporte en Honduras.
+            </p>
+
+            <a href="#atletas" class="btn-natacion">
+                DESCUBRIR NUESTROS ATLETAS
+            </a>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer-section" id="contacto">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="images/logo.png"
+                         alt="Natación Hondureña"
+                         class="footer-logo">
+
+                    <h3>Natación Hondureña</h3>
+
+                    <p>
+                        Un espacio dedicado a conocer y destacar
+                        el talento, la disciplina y la pasión
+                        por los deportes acuáticos de Honduras.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="widget">
+                        <h3>Explorar</h3>
+
+                        <ul class="list-unstyled links">
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#atletas">Atletas</a></li>
+                            <li><a href="#disciplinas">Disciplinas</a></li>
+                            <li><a href="#noticias">Noticias</a></li>
+                            <li><a href="#historia">Historia</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="widget">
+                        <h3>Deportes acuáticos</h3>
+
+                        <ul class="list-unstyled links">
+                            <li><a href="#disciplinas">Natación en piscina</a></li>
+                            <li><a href="#disciplinas">Aguas abiertas</a></li>
+                            <li><a href="#disciplinas">Clavados</a></li>
+                            <li><a href="#disciplinas">Polo acuático</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="widget">
+                        <h3>Redes sociales</h3>
+
+                        <p>
+                            Sigue las actividades y novedades
+                            de la natación hondureña.
+                        </p>
+
+                        <!-- Sustituye los # por los enlaces reales -->
+                        <a href="#"
+                           class="social-link"
+                           aria-label="Facebook">f</a>
+
+                        <a href="#"
+                           class="social-link"
+                           aria-label="Instagram">◎</a>
+
+                        <a href="#"
+                           class="social-link"
+                           aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p class="mb-0">
+                    Copyright &copy; <span id="current-year"></span>
+                    Natación Hondureña.
+                    Todos los derechos reservados.
+                </p>
+
+                <p class="mb-0">
+                    Honduras · Deporte · Disciplina · Pasión
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+</div>
+
+<!-- BOTÓN VOLVER AL INICIO -->
+<a href="#inicio"
+   id="btnVolverInicio"
+   class="btn-volver-inicio"
+   aria-label="Volver al inicio"
+   title="Volver al inicio">
+    ↑
+</a>
+
+<!-- JAVASCRIPT -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    // Año automático en el pie de página
+    document.getElementById('current-year').textContent =
+        new Date().getFullYear();
+
+    // Inicializar animaciones cuando la biblioteca esté disponible
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 60
+        });
+    }
+
+    // ---- BOTÓN VOLVER AL INICIO ----
+    (function () {
+        var btn = document.getElementById('btnVolverInicio');
+        if (!btn) return;
+
+        function controlarBoton() {
+            if (window.scrollY > 300) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        }
+
+        window.addEventListener('scroll', controlarBoton);
+        controlarBoton();
+
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>
